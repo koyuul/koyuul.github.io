@@ -130,7 +130,8 @@ nav{
 }
 #name-card img{
     border-radius: 25%;
-    margin: .5em .5em .5em 0;
+    margin: .5em .5em .5em auto;
+    
 
     width: 70px;
     height: 70px;
@@ -145,4 +146,25 @@ nav{
     
     background-color: #DBBD85;
     flex-shrink: 0;
+}
+
+#nav-links a{
+    text-decoration: none;
+}
+
+#nav-links h2{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    font-size: 1.5em;
+    
+    width: 70%;
+    border-radius: 25px;
+    padding: .3em;
+    padding-left: 1em;
+    margin-left: 1rem;
+}
+#nav-links h2:hover{
+    text-decoration: none;
+    background-color: var(--light-blue);
 }
