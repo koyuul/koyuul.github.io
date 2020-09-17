@@ -3,6 +3,13 @@ html {
     padding: 0;
     min-height: 100vh;
     height: 100vh;
+
+    /*color scheme*/
+    --dark-blue: #505582;
+    --light-blue: #71B6B8;
+    --dark-tan: #DBBD85;
+    --light-tan: #F7E6B5;
+    --white: #F4F8FF;
 }
 
 body{
@@ -15,24 +22,6 @@ body{
     background-color: #F7E6B5;
 }
 
-nav{
-    padding: 1em;
-    width: 17%;
-    top: 0px;
-    height: 100%;
-    position: fixed;
-
-    background-color: #DBBD85;
-}
-
-#nav-placeholder{
-    padding: 1em;
-    width: var(--nav-width);
-    top: 0px;
-    height: 100%;
-    
-    background-color: #DBBD85;
-}
 
 main{
     padding: 0px 2em 0px 2em;
@@ -45,6 +34,7 @@ main{
 
 h2{
     font-size: xx-large;
+    margin: 0;
 }
 
 hr{
@@ -56,35 +46,31 @@ hr{
     background-color: #DBBD85;
 }
 
+p{
+    margin: 0 0 1em 0;
+}
+
+
 .major{
     background-color: #505582;
     margin: 1em 1em 3em 1em;
     padding: 1em 1em 1em 1em;
+
+    border-radius: 25px;
 }
 
-#about-div img{
-    margin-top: 2em;
-    border-radius: 50%;
-}
-
-#about-div h2{
-    margin: 0;
+.minor{
+    background-color: #71B6B8;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 25px;
 }
 
 #about-container{
     display: flex;
-    text-align: left;
+    text-align: center;
 }
 
-#about-text{
-    background-color: #71B6B8;
-    padding: 1em;
-    margin: 1em;
-}
-
-#about-text p{
-    margin: 0 0 1em 0;
-}
 
 #about-text h3{
     margin: 0 0 0 0;
@@ -96,7 +82,7 @@ hr{
 
 #lists-container{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 #lists-container ul{
@@ -106,4 +92,57 @@ hr{
 #cards-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    background-color: #71B6B8;
+}
+
+#cards-div h4{
+    margin: 0 1em 0 1em;
+}
+
+/* NAV BAR */
+
+nav{
+    padding: 0;
+    width: 22vw;
+    top: 0px;
+    height: 100%;
+    position: fixed;
+
+    background-color: #DBBD85;
+}
+
+#name-card{
+    display: flex;
+    border-radius: 25px;
+    margin: 1em;
+
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+ 
+#name-card h2{
+    font-size: 1.8em;
+    margin: 0;
+    padding: 1rem 1rem .3rem 1rem;
+}
+#name-card p{
+    padding: 0 1em 0 1.3em;
+}
+#name-card img{
+    border-radius: 25%;
+    margin: .5em .5em .5em 0;
+
+    width: 70px;
+    height: 70px;
+}
+
+
+#nav-placeholder{
+    padding: 0em;
+    width: 22vw;
+    top: 0px;
+    height: 100%;
+    
+    background-color: #DBBD85;
+    flex-shrink: 0;
 }

@@ -10,17 +10,22 @@
 <body>
     <nav>
         <div id="name-card">
-            <h3>Kyle Deleon</h3>
-            <p>Software Developer</p>
+            <div id="name-text">
+            <h2>  Kyle Deleon </h2>
+            <p>software developer</p>
+            </div>
+            <img src="images/me.JPG">
         </div>
-        <a href="#about" id="about-link">About</a>
-        <br>
-        <a href="#portfolio" id="portfolio-link">Portfolio</a>
-        <div id = "socials">
-            <a href = "#" id="twitter" class="social-media"></a>
-            <a href = "#" id="youtube" class="social-media"></a>
-            <a href = "#" id="instagram" class="social-media"></a>
-            <a href = "#" id="email" class="social-media"></a>
+        <div id="nav-links">
+            <a href="#about-div" id="about-link">About</a>
+            <br>
+            <a href="#portfolio-div" id="portfolio-link">Portfolio</a>
+            <div id = "socials">
+                <a href = "#" id="twitter" class="social-media"></a>
+                <a href = "#" id="youtube" class="social-media"></a>
+                <a href = "#" id="instagram" class="social-media"></a>
+                <a href = "#" id="email" class="social-media"></a>
+            </div>
         </div>
     </nav>
     
@@ -32,8 +37,7 @@
             <h2>about</h2>
             <hr>
             <div id = "about-container" >
-                <img src="images/me.JPG" width = "150" height = "150">
-                <div id = "about-text">
+                <div id = "about-text" class = "minor">
                     <p>
                         Hi! My name is Kyle Deleon. I'm a high school student in the Bay Area, CA. I code
                         because I love to see my ideas appear as something I can actually interact with. In my spare time 
@@ -44,7 +48,7 @@
                         <h3>current skillset:</h3>
                         <div id = "lists-container">
                             <ul>
-                                <li>HTML/CSS/JavaScript</li>
+                                <li>HTML/CSS/JS</li>
                                 <li>Python</li>
                                 <li>Ruby</li>
                             </ul>
@@ -63,20 +67,42 @@
         </div>
 
         <div id="portfolio-div" class = "major">
-            <h2>Portfolio</h2>
-            <p>
-                Here are some of the things I've done recently:
-            </p>
+            <h2>portfolio</h2>
+            <hr>
+            <div id = "cards-main" class = "minor">
+                <p>
+                    Here are some of the things I've done recently:
+                </p>
+                <div id="cards-div">
+                    <div class = "card">
+                        <h4>project one</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div>
+                    
+                    <div class = "card">
+                        <h4>project two</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div> 
 
-            <div id="cards-div">
-                <div class = "card">
-                    <h4>project one</h4>
-                    <img src = "#" width = "200" height = "150">
-                </div>
-                
-                <div class = "card">
-                    <h4>project two</h4>
-                    <img src = "#" width = "200" height = "150">
+                    <div class = "card">
+                        <h4>project two</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div>
+                    
+                    <div class = "card">
+                        <h4>project two</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div>
+                    
+                    <div class = "card">
+                        <h4>project two</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div>
+                    
+                    <div class = "card">
+                        <h4>project two</h4>
+                        <img src = "#" width = "200" height = "150">
+                    </div>
                 </div>
             </div>
 
