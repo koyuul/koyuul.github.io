@@ -9,11 +9,12 @@ html {
     --dark-blue: #7b8f99;
     --light-blue: #446984;
     --dark-tan: #A5957B;
+    --darker-tan: #685E4E;
     --light-tan: #DBD5C7;
     --white: #F4F8FF;
 
     /*
-    --dark-blue: #8F92A1;
+    --dark-blue: 
     --light-blue: #DCE0DF;
     --white: 
     --dark-tan: #5D5D5D;
@@ -47,13 +48,14 @@ h2{
     margin: 0;
 }
 
-hr{
+h2 .horz-line{
     width: 75%;
     height: .1em;
     margin-top: .2em;
     
     color: var(--white);
     background-color: var(--white);
+    font-size: .3em;
 }
 
 p{
@@ -70,8 +72,8 @@ p{
 }
 
 .minor{
-    padding: 1em;
-    margin: 1em;
+    padding: 1em 1em 0 1em;
+    margin: 0 3em 0 3em;
     border-radius: 25px;
 }
 
@@ -101,48 +103,97 @@ p{
 #cards-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: .5vw;
 }
 
 #cards-div h4{
-    margin: 0 1em 0 1em;
+    display: inline-block;
+    margin: 0;
 }
+
+#big-socials-container a{
+    text-decoration: none;
+}
+
+.big-social{
+    fill: var(--white);
+    width:  4em;
+    height: 4em; 
+}
+
+.big-social:hover{
+    fill: var(--darker-tan);
+}
+
+
 
 /* NAV BAR */
 
 nav{
     padding: 0;
-    width: 22vw;
+    max-width: 22vw;
     top: 0px;
     height: 100%;
     position: fixed;
+    display:flex;
+    flex-direction: column;
 
     background-color: var(--dark-tan);
+}
+
+#nav-appear{
+    display: none;
+    position: fixed;
+    fill: var(--white);
+}
+
+#nav-appear div{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darker-tan);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 #name-card{
     display: flex;
     border-radius: 25px;
-    margin: 1em;
+    margin: .25em; 
 
-    background-color: var(--dark-tan);
+    background-color: var(--darker-tan);
     color: var(--white);
+
 }
- 
+
+#name-text{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
 #name-card h2{
-    font-size: 1.8em;
+    font-size: 2.25vw;
     margin: 0;
-    padding: 1rem 1rem .3rem 1rem;
+    padding: 1rem 1rem .1em 0rem;
+    
 }
 #name-card p{
-    padding: 0 1em 0 1.3em;
+    font-size: 1.25vw;
+    text-align: right;
+    padding: 0 1em 0 1em;
+    color: var(--dark-blue)
 }
 #name-card img{
     border-radius: 25%;
-    margin: .5em .5em .5em auto;
+    margin: .5em .5em .5em .5em;
     
 
-    width: 70px;
-    height: 70px;
+    max-width: 100%;
+    max-height: auto;
+    background-size: contain;
 }
 
 
@@ -152,7 +203,7 @@ nav{
     top: 0px;
     height: 100%;
     
-    background-color: #DBBD85;
+    background-color: var(--light-tan);
     flex-shrink: 0;
 }
 
@@ -160,21 +211,189 @@ nav{
     text-decoration: none;
 }
 
+#nav-links a:hover{
+    background-color: var(--darker-tan);
+}
+
+#nav-links .active-nav{
+    background-color: var(--light-blue);
+    
+}
+
 #nav-links h2{
+    display: flex;
+    justify-content: flex-end;
     text-decoration: none;
     text-align: right;
     color: var(--white);
     background-color: var(--dark-tan);
     font-size: 1.5em;
     
-    width: 70%;
     border-radius: 10px;
-    padding: .3em;
-    padding-left: 1em; 
-    margin-left: 1rem;
+    padding: .3em 1em .3em 0em;
     margin-top: 0;
 }
 #nav-links h2:hover{
     text-decoration: none;
-    background-color: var(--light-blue);
 }
+
+.bar svg{
+    fill: var(--white);
+    margin-right: auto;
+    padding-left: .5em;
+}
+
+#socials{
+    display: flex;
+    font-size: .75em;
+    margin-top:  auto;
+    padding-top: .5rem;
+
+    width: 100%;
+
+    justify-content: space-evenly;
+    background-color: var(--darker-tan);
+    
+
+}
+
+#socials a{
+    text-decoration: none;
+}
+
+
+.nav-social{
+    fill: var(--white);
+    width:  4em;
+    height: 4em; 
+}
+
+.nav-social:hover{
+    fill: var(--dark-blue);
+}
+
+#contact-main{
+    width: 100%;
+    margin: 0em;
+    padding: 0em;
+}
+
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    nav{
+        display: none;
+    }
+    #nav-placeholder{
+        display:none;
+    }
+    #nav-appear{
+        display: inline;
+        top: .5em;
+        left: .5em;
+    }
+    #nav-appear div{
+        display: flex;
+    }
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    nav{
+        display: none;
+    }
+    #nav-placeholder{
+        display:none;
+    }
+    #nav-appear{
+        display: inline;
+        top: .25em;
+        left: .25em;
+    }
+    #nav-appear div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--darker-tan);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    main{
+        padding: 0 .25em;
+    }
+ }
+ 
+
+@media all and (max-width: 768px) {
+    nav{
+        display: inline-block;
+        min-width: 75vw;
+    }
+    #nav-placeholder{
+        display: none;
+    }
+
+    #nav-appear{
+        display: inline;
+        position: fixed;
+        fill: var(--white);
+
+        top: .25em;
+        left: .25em;
+    }
+
+    #nav-appear div{
+        display: flex;
+    }
+
+    body{
+        margin: 0;
+    }
+    main{
+        padding: 0em;
+    }
+
+    .major{
+        background-color: var(--dark-blue);
+    
+        border-radius: 25px;
+    }
+    
+    .minor{
+        margin: 0em;
+        padding-left: 0em;
+        padding-right: 0em;
+        border-radius: 25px;
+
+        font-size: 3vw ;
+    }
+    #lists-container{
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 1em;
+    }
+    #lists-container ul{
+        padding: 0em;
+    }
+
+    #cards-main{
+        overflow: scroll;
+    }
+
+    #projects-text{
+        font-size: 3vw;
+    }
+
+    #cards-div{
+        column-gap: 2vw;
+    }
+
+    
+ }
