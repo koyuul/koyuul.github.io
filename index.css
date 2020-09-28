@@ -100,15 +100,35 @@ p{
     margin-top: .5em;
 }
 
+#lists-container li{
+    text-align: left;
+}
+
 #cards-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: .5vw;
+    column-gap: 0vw;
 }
 
 #cards-div h4{
     display: inline-block;
-    margin: 0;
+    margin: 1em 0 .5em 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topcard h4{
+    margin: 0 0 .5em 0 !important;
+}
+
+.preview-img{
+    width: 300px;
+    height: 200px;
 }
 
 #big-socials-container a{
@@ -127,7 +147,7 @@ p{
 
 
 
-/* NAV BAR */
+/* NAV BAR ************************************************/
 
 nav{
     padding: 0;
@@ -157,6 +177,10 @@ nav{
     border-radius: 50%;
 }
 
+#nav-return{
+    display: none;
+}
+
 #name-card{
     display: flex;
     border-radius: 25px;
@@ -184,13 +208,12 @@ nav{
     font-size: 1.25vw;
     text-align: right;
     padding: 0 1em 0 1em;
-    color: var(--dark-blue)
+    color: var(--dark-blue);
 }
 #name-card img{
     border-radius: 25%;
     margin: .5em .5em .5em .5em;
     
-
     max-width: 100%;
     max-height: auto;
     background-size: contain;
@@ -286,9 +309,10 @@ nav{
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
+
 @media all and (min-width: 1024px) and (max-width: 1280px) {
     nav{
-        display: none;
+        display: flex;
     }
     #nav-placeholder{
         display:none;
@@ -303,9 +327,18 @@ nav{
     }
  }
  
+
+@media all and (max-width: 1024px){
+    .preview-img{
+        width: 150px;
+        height: 100px;
+    }
+}
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
     nav{
-        display: none;
+        display: flex;
+        min-width: 50vw !important;
     }
     #nav-placeholder{
         display:none;
@@ -333,11 +366,21 @@ nav{
 
 @media all and (max-width: 768px) {
     nav{
-        display: inline-block;
+        display: none;
         min-width: 75vw;
     }
     #nav-placeholder{
         display: none;
+    }
+
+    #nav-return{
+        display: inline;
+        position: fixed;
+        right: 0;
+        top: 0;
+        min-width: 25vw;
+        
+        background-color: red;
     }
 
     #nav-appear{
@@ -353,6 +396,13 @@ nav{
         display: flex;
     }
 
+    #name-card h2{
+        font-size: 5vw;
+    }
+
+    #name-card p{
+        font-size: 3vw;
+    }
     body{
         margin: 0;
     }

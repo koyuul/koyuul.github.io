@@ -12,5 +12,7 @@ $(window).scroll(function(){
     })
 });
 
-major_array = ['#about', '#projects', '#contact'];
-//refer to bars and navs by appending -bar or -link
+$("#nav-appear").on("click", () => {
+    console.log('clicked')
+    $("nav").css("display", "flex");
+})
