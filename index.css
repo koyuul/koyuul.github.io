@@ -110,9 +110,19 @@ p{
     column-gap: 0vw;
 }
 
-#cards-div h4{
+#cards-div a{
     display: inline-block;
     margin: 1em 0 .5em 0;
+    text-decoration: none;
+    color: var(--white);
+}
+
+#cards-div a:hover{
+    text-decoration: underline;
+}
+
+#cards-div a:visited{
+    color: var(--white);
 }
 
 .card{
@@ -122,15 +132,17 @@ p{
     align-items: center;
 }
 
-.topcard h4{
-    margin: 0 0 .5em 0 !important;
+.topcard a{
+    margin: 0em 0 .5em 0 !important;
 }
+
 
 .preview-img{
     width: 20vw;
-    height: 15vw;
+    height: 13.33vw;
     max-width: 100%;
     max-height: auto;
+    border-radius: 25px;
 }
 
 #big-socials-container a{
