@@ -35,7 +35,7 @@ body{
 
 
 main{
-    padding: 0px 2em 0px 2em;
+    padding: 0px 1vw 0px 1vw;
     width: 100%;
     height: 100%;
 
@@ -127,8 +127,10 @@ p{
 }
 
 .preview-img{
-    width: 300px;
-    height: 200px;
+    width: 20vw;
+    height: 15vw;
+    max-width: 100%;
+    max-height: auto;
 }
 
 #big-socials-container a{
@@ -151,13 +153,13 @@ p{
 
 nav{
     padding: 0;
+    min-width: 22vw;
     max-width: 22vw;
     top: 0px;
     height: 100%;
     position: fixed;
-    display:flex;
     flex-direction: column;
-
+    display: none;
     background-color: var(--dark-tan);
 }
 
@@ -165,6 +167,7 @@ nav{
     display: none;
     position: fixed;
     fill: var(--white);
+    z-index: 2;
 }
 
 #nav-appear div{
@@ -175,10 +178,29 @@ nav{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    z-index: 1;
 }
 
 #nav-return{
     display: none;
+    position: fixed;
+    min-width: 100vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#nav-placeholder{
+    padding: 0em;
+    min-width: 22vw;
+    max-width: 22vw;
+    top: 0px;
+    height: 100%;
+    
+    background-color: var(--light-tan);
+    flex-shrink: 0;
 }
 
 #name-card{
@@ -220,15 +242,6 @@ nav{
 }
 
 
-#nav-placeholder{
-    padding: 0em;
-    width: 22vw;
-    top: 0px;
-    height: 100%;
-    
-    background-color: var(--light-tan);
-    flex-shrink: 0;
-}
 
 #nav-links a{
     text-decoration: none;
@@ -310,12 +323,22 @@ nav{
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 
-@media all and (min-width: 1024px) and (max-width: 1280px) {
+@media all and (min-width: 1280px){
     nav{
         display: flex;
     }
     #nav-placeholder{
-        display:none;
+        display: block;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    nav{
+        display: none;
+        min-width: 30vw;
+    }
+    #nav-placeholder{
+        display: none;
     }
     #nav-appear{
         display: inline;
@@ -324,6 +347,9 @@ nav{
     }
     #nav-appear div{
         display: flex;
+    }
+    #nav-return{
+        display: none;
     }
  }
  
@@ -335,13 +361,13 @@ nav{
     }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     nav{
-        display: flex;
+        display: none;
         min-width: 50vw !important;
     }
     #nav-placeholder{
-        display:none;
+        display: none;
     }
     #nav-appear{
         display: inline;
@@ -357,7 +383,9 @@ nav{
         height: 50px;
         border-radius: 50%;
     }
-
+    #nav-return{
+        display: none;
+    }
     main{
         padding: 0 .25em;
     }
@@ -374,13 +402,12 @@ nav{
     }
 
     #nav-return{
-        display: inline;
+        display: none;
         position: fixed;
         right: 0;
         top: 0;
         min-width: 25vw;
-        
-        background-color: red;
+    
     }
 
     #nav-appear{
