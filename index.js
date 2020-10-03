@@ -43,3 +43,16 @@ window.onresize = () => {
         $("nav").css("display", "none");
     }
 }
+
+$(".preview-img").each( function(){ //display captions on project images
+    this.base = $(this).parent().parent();
+    $(this).mouseenter(function(){ //hover on
+        $(this).css("filter", "brightness(50%)");
+        $('.img-caption ', this.base).css("display", "inline");  
+    });
+
+    $(this).mouseleave(function(){ //hover off
+        $(this).css("filter", "brightness(100%)");
+        $('.img-caption ', this.base).css("display", "none");  
+    });
+})

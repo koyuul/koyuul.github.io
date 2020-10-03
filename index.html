@@ -18,13 +18,15 @@
         
     </div>
     <nav>
-        <div id="name-card">
-            <img src="images/me.JPG">
-            <div id="name-text">
-            <h2>  Kyle Deleon </h2>
-            <p>software developer</p>
+        <a href = "index.html" id = "name-card-link">
+            <div id="name-card">
+                <img src="images/me.JPG">
+                <div id="name-text">
+                <h2>  Kyle Deleon </h2>
+                <p>software developer</p>
+                </div>
             </div>
-        </div>
+        </a>
         <div id="nav-links">
             <a href="#about" id="about-link">
                 <div class = "bar">
@@ -114,42 +116,33 @@
 
         <div id="projects" class = "major">
             <h2>projects <hr class = "horz-line"  id = "projects-bar"> </h2>
-                <p id = "projects-text">
+                <p id = "projects-text" class = "subtitle">
                     Here are some of the things I've done recently:
                 </p>
             <div id = "cards-main" class = "minor">
              
                 <div id="cards-div">
-                    <div class = "card topcard">
+                    <div id = "typetester" class = "card topcard">
                         <a href = "/project-pages/typetester.html">TypeTester</a>
-                        <img src = "images/previews/typetester.png" class = "preview-img">
+                        <div class = "img-container">
+                            <img src = "images/previews/typetester.png" id = "typetester-preview" class = "preview-img">
+                        </div>
+                        <div class = "img-caption">
+                            <p> TypeTester is a Chrome & Firefox extension that allows you to type out a prompt in a small window in your browser!</p>
+                        </div>
                     </div>
                     
-                    <div class = "card topcard">
-                        <a>2021Percent</a>
-                        <img src = "#" class = "preview-img">
-                    </div> 
+                    <div id = "2021percent" class = "card topcard">
+                        <a href = "/project-pages/2021percent.html">2021Percent</a>
+                        <div class = "img-container">
+                            <img src = "images/previews/2021percent.png" id = "2021percent-preview" class = "preview-img">
+                        </div>
+                        <div class = "img-caption">
+                            <p>2021Percent is a Twitter Bot that tweets out the percent of high school, that my class has completed so far! </p>
+                        </div>
+                    </div>
 
-                    <div class = "card topcard">
-                        <a>project two</a>
-                        <img src = "#" class = "preview-img">
-                    </div>
-                    
-                    <div class = "card">
-                        <a>project two</a>
-                        <img src = "#" class = "preview-img">
-                    </div>
-                    
-                    <div class = "card">
-                        <a>project two</a>
-                        <img src = "#" class = "preview-img">
-                    </div>
-                    
-                    <div class = "card">
-                        <a>project two</a>
-                        <img src = "#" class = "preview-img">
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
 
@@ -187,6 +180,6 @@
     </main>
 
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src = "index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

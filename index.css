@@ -1,3 +1,4 @@
+/* BROAD**************************************/
 html {
     margin: 0;
     padding: 0;
@@ -77,11 +78,12 @@ p{
     border-radius: 25px;
 }
 
+/* ABOUT ****************************************/
+
 #about-container{
     display: flex;
     text-align: center;
 }
-
 
 #about-text h3{
     margin: 0 0 0 0;
@@ -104,46 +106,71 @@ p{
     text-align: left;
 }
 
+/*PROJECTS ****************************************/
+
+.subtitle{
+    margin: .5em 0 0 0;
+}
+
 #cards-div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 0vw;
 }
 
-#cards-div a{
-    display: inline-block;
-    margin: 1em 0 .5em 0;
-    text-decoration: none;
-    color: var(--white);
-}
 
-#cards-div a:hover{
-    text-decoration: underline;
-}
-
-#cards-div a:visited{
-    color: var(--white);
-}
 
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+
+.card a{
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: underline;
+    color: var(--white);
+    font-size: 1em;
 }
 
 .topcard a{
-    margin: 0em 0 .5em 0 !important;
+    margin: 0em 0 .25em 0 !important;
 }
 
 
-.preview-img{
+.card p{
+    font-size: .8vw;
+    margin: 0;
+}
+
+.img-container{
     width: 20vw;
     height: 13.33vw;
+    position: relative;
+}
+
+.preview-img{
     max-width: 100%;
-    max-height: auto;
+    max-height: 100%;
     border-radius: 25px;
 }
+
+
+.img-caption{
+    display: none;
+    position: absolute;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* SOCIALS ***********************************************/
 
 #big-socials-container a{
     text-decoration: none;
@@ -215,6 +242,10 @@ nav{
     flex-shrink: 0;
 }
 
+#name-card-link{
+    text-decoration: none;
+}
+
 #name-card{
     display: flex;
     border-radius: 25px;
@@ -222,7 +253,6 @@ nav{
 
     background-color: var(--darker-tan);
     color: var(--white);
-
 }
 
 #name-text{
@@ -476,7 +506,7 @@ nav{
         overflow: scroll;
     }
 
-    #projects-text{
+    .subtitle{
         font-size: 3vw;
     }
 
