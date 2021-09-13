@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+/*
+    small and extra small and medium:
+        sidebar becomes a top bar
+        modal sidebar becomes a bottom bar
+    
+
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+ }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+     
+}
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+body{
+    display: flex;
+    align-items:flex-start;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    --title: #787878;
+    --text: #AAAAAA;
+    --bar: #EFEFEF;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 50em;
+    padding-left:4vw;
+
+    background-color: white;
+    overflow-x: hidden;
+}
+
+hr{
+    min-width: 100%;
+
+    border: 1px solid var(--bar);
+
+}
+
+h1, h2, h3, h4{
+    color: var(--title);
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/*#region sidebar*/
+#sidebar{
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+    min-width: 35vw;
+    height:100vh;
+    padding-right: 2em;
+
+
+    background-color: slategray;
+    text-align: right;
+    align-items: flex-end;
+}
+
+#avatar_container>#avatar{
+    max-width: 25%;
+    height: auto;
+    margin-top: 20vh;
+    border-radius: 50%;
+
+}
+
+#sidebar>#heading{
+    color: whitesmoke;
+    font-size: 1.3em;
+}
+
+#sidebar>#links>a{
+    color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    
+}
+
+#sidebar>#socials{    
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: auto;
+    margin-bottom: 4em;
+}
+
+#sidebar>#socials>a{
+    color: whitesmoke;
+    margin-right: .5em;
+}
+
+/*#endregion*/
+
+/*#region main*/
+/*#region content*/
+#about{
+    margin-top: 17vh;
+}
+
+
+.row{
+    display: flex;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > h1{
+    margin-bottom: 0px;
+}
+
+#projects > p{
+    margin-top: 1.2em;
+}
+
+#events{
+    display: flex;
+    flex-direction: column;
+}
+
+#events > h1{
+    margin-bottom: 0px;
+}
+
+#events > p{
+    margin-top: 1.2em;
+}
+/*#endregion*/
+/*#region CARD STUFF***/
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    text-align: center;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card > h3{
+    color: var(--title);
+}
+
+.card > h3:hover{
+    color: var(--text);
+}
+
+.open_tt:hover{
+    cursor: pointer;
+}
+
+.card img{
+    max-width: 98%;
+    border-radius: 3%;
+    
+}
+
+.card h3{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.card > p{
+    display:flex;
+    justify-content: center;
+    margin-top: 0;
+    font-size: 14px;
+    flex-wrap: wrap;
+    width:90%;
+}
+/*#endregion*/
+
+/*#region modal*/
+
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,.4);
+
+}
+
+.modal_content{
+    background-color: #fefefe;
+    margin: 3% auto;
+
+    padding: 20px;
+    border: 1px solid #888;
+    
+
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+
+    overflow-y: auto;
+}
+
+.modal_main{
+
+    width: 80%;
+    min-height:100%;
+    
+    box-sizing: border-box;
+}
+
+.close{
+    position: fixed;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.close:hover, .close:focus{
+    
+    color:black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal_side{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    flex-grow: 1;
+
+    position: sticky;
+    top: 0;
+    width: 20%;
+    min-height: 100%;
+    
+    border-left:2px solid var(--bar);
+
+}
+
+.modal h3{
+    font-size: 1.6em;
+    margin-bottom: .3em;
+}
+
+.modal h4{
+    font-size: 1.2em;
+    margin-bottom: .3em;
+}
+
+.modal p{
+    margin-top: 0px;
+}
+
+.modal_opener{
+    cursor: pointer;
+}
+
+/*carousel stuff*/
+.glide__arrow{
+    color: black;
+    border-color: black;
+    box-shadow: none;
+}
+.glide__arrow:hover{
+    border-color: var(--text)
+}
+
+/*#endregion*/
+
+/*#endregion*/
