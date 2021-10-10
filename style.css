@@ -228,6 +228,11 @@ p{
     color: var(--text);
 }
 
+.modal_content i{
+    color: var(--title);
+    text-decoration: none;
+}
+
 .modal_main{
     padding-left: 2%;
     padding-right: 2%;
