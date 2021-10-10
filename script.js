@@ -28,17 +28,35 @@ modal_dicts = {
         modal: document.getElementById("twit_modal"),
         btn: document.getElementsByClassName("twit_open"),
         close: document.getElementById("twit_close")
+    },
+
+    cssi: {
+        modal: document.getElementById("cssi_modal"),
+        btn: document.getElementsByClassName("cssi_open"),
+        close: document.getElementById("cssi_close")
+    },
+
+    graduation: {
+        modal: document.getElementById("graduation_modal"),
+        btn: document.getElementsByClassName("graduation_open"),
+        close: document.getElementById("graduation_close")
+    },
+
+    napalearns: {
+        modal: document.getElementById("napalearns_modal"),
+        btn: document.getElementsByClassName("napalearns_open"),
+        close: document.getElementById("napalearns_close")
     }
 }
+
 
 
 for(let topic in modal_dicts){
     for(let element in modal_dicts[topic]){
         for(let btn of modal_dicts[topic]["btn"]){
-            console.log(btn);
             btn.onclick = function(){
+                console.log(modal_dicts[topic]["modal"])
                 modal_dicts[topic]["modal"].style.display = "block";
-                new Glide('.glide').mount();
                 document.body.style.overflow = "hidden";
             }
         }
@@ -55,12 +73,12 @@ for(let topic in modal_dicts){
             document.body.style.overflow = "visible";
         }
         
-        window.onmousedown = function(event){
+        document.addEventListener('mousedown', (event) => {
             if(event.target == modal_dicts[topic]["modal"]){
                 modal_dicts[topic]["modal"].style.display="none";
                 document.body.style.overflow = "visible";
             }
-        }
+        })
     }
 }
 // var tt_modal = document.getElementById("tt_modal")
