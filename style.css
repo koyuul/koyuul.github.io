@@ -104,12 +104,43 @@ p{
 
 /*#endregion*/
 
-/*#region main*/
+/*#region main  */
 /*#region content*/
 #about{
     margin-top: 17vh;
 }
 
+#about p {
+    margin-left: 1em;
+}
+#skills{
+    min-width: 100%;
+}
+
+#skills h1{
+    margin-bottom: 8px;
+}
+
+#skills_list_container{
+    min-width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#skills h3{
+    margin-top: .25em;
+    margin-bottom: .5em;
+}
+
+.skill_col{
+    margin-bottom: 1em;
+}
+
+.skill_col ul{
+    color: var(--text);
+    margin: 0 0 0 1em;
+    padding: 0;
+}
 
 .row{
     display: flex;
