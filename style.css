@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
-
-/*
-    small and extra small and medium:
-        sidebar becomes a top bar
-        modal sidebar becomes a bottom bar
-    
-
-*/
-
 html{
     scroll-behavior: smooth !important;
 }
@@ -63,6 +54,8 @@ p{
 
 
     background-color: slategray;
+    background-image: url("images/backgrounds/keyboard.jpg");
+    background-size: cover;
     text-align: right;
     align-items: flex-end;
 }
@@ -72,7 +65,12 @@ p{
     height: auto;
     margin-top: 20vh;
     border-radius: 50%;
+    
+    transition: .1s;
+}
 
+#avatar:hover{
+    transform: scale(1.05);
 }
 
 #sidebar>#heading{
