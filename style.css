@@ -9,8 +9,8 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 
-    --title: #787878;
-    --text: #AAAAAA;
+    --title: #626262;
+    --text: #909090;
     --bar: #EFEFEF;
 }
 
@@ -180,14 +180,6 @@ p{
     min-width: 50%;
     max-width: 50%;
 }
-
-.card > a{
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
 .card > h3{
     color: var(--title);
 }
@@ -239,14 +231,14 @@ p{
 
 .modal_content{
     background-color: #fefefe;
-    margin: 3% auto;
+    margin: 1% auto;
 
     padding: 20px;
     border: 1px solid #888;
     
 
     width: 80%;
-    height: 80%;
+    height: 90%;
 
     display: flex;
 
@@ -330,6 +322,7 @@ p{
 
 .modal_opener{
     cursor: pointer;
+    transition: .1s; /*transition scaling animation done in script.js*/
 }
 
 .download_icons a:hover{

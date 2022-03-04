@@ -98,4 +98,27 @@ document.addEventListener('mousedown', (event) => { //closes on outside click
 })
 
 
-// //#endregion
+//#endregion
+
+//#region expand on hover
+for (card of document.getElementsByClassName("card")){
+    let modal_openers =  card.querySelectorAll(".modal_opener")
+    card.addEventListener("mouseover", function(){
+        for(let element of modal_openers){
+            element.style.transform = "scale(1.02)";
+        }
+    })
+
+    card.addEventListener("mouseout", function(){
+        for(let element of modal_openers){
+            element.style.transform = "scale(1)";
+        }
+    })
+}
+
+/*
+    on card:hover{
+        each of the modal_opener elements scale transform
+    }
+*/
+//#endregion
