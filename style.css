@@ -1,3 +1,4 @@
+/*#region global*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
 html{
     scroll-behavior: smooth !important;
@@ -28,18 +29,19 @@ main{
 hr{
     min-width: 100%;
     border: 1px solid var(--bar);
-
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, a{
     color: var(--title);
     font-family: 'Poppins', sans-serif;
 }
 
-p{
+p, li{
     color: var(--text);
     line-height: 1.6;
+    list-style-type: '–   ';
 }
+/*#endregion*/
 
 /*#region sidebar*/
 #sidebar{
@@ -67,10 +69,6 @@ p{
     border-radius: 50%;
     
     transition: .1s;
-}
-
-#avatar:hover{
-    transform: scale(1.05);
 }
 
 #sidebar>#heading{
@@ -102,7 +100,6 @@ p{
 
 /*#endregion*/
 
-/*#region main  */
 /*#region content*/
 #about{
     margin-top: 17vh;
@@ -170,6 +167,8 @@ p{
     margin-top: 1.2em;
 }
 /*#endregion*/
+
+
 /*#region CARD STUFF***/
 .card{
     display: flex;
@@ -180,18 +179,20 @@ p{
     min-width: 50%;
     max-width: 50%;
 }
-.card > h3{
+
+.card h3{ 
     color: var(--title);
+    text-align: center;
 }
 
 .card > h3:hover{
     color: var(--text);
 }
 
-.open_tt:hover{
+.modal_opener{
     cursor: pointer;
+    transition: .1s; /*transition scaling animation done in script.js*/
 }
-
 
 .card h3{
     margin-top: .5em;
@@ -258,22 +259,77 @@ p{
     padding-left: 2%;
     padding-right: 2%;
 
-
     max-width: 80%;
     min-height:100%;
+
+    text-align: left;
 
     box-sizing: border-box;
     border-right: 2px solid var(--bar);
 
 }
 
+.modal_main_caption{
+    margin-top: .3em;
+    text-align: center;
+}
+
 .preview{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 80%;
     border-radius: 10px;     
 }
 
+.modal li{
+
+}
+
+.modal h3{
+    font-size: 1.6em;
+    margin-bottom: .3em;
+}
+
+.modal h4{
+    font-size: 1.2em;
+    margin-bottom: .3em;
+}
+
+.modal_main h4~p{
+    margin-left: 2em;
+}
+
+.modal_side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+ 
+    top: 0;
+    min-width: 20%;
+    min-height: 100%;   
+}
+
+.modal_side p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.download_icons a:hover{
+    color: var(--title);
+}
+
 .twitter-timeline{
-    width: 75% !important;
+    width: 75% !important; /*override twitter-timeline client*/
+
+}
+
+.modal_main iframe{
+    display: block !important; /*override twitter-timeline client*/
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .close{
@@ -290,51 +346,12 @@ p{
     text-decoration: none;
     cursor: pointer;
 }
-
-.modal_side{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
- 
-    top: 0;
-    min-width: 20%;
-    min-height: 100%;
-    
-}
-
-
-.modal h3{
-    font-size: 1.6em;
-    margin-bottom: .3em;
-}
-
-.modal h4{
-    font-size: 1.2em;
-    margin-bottom: .3em;
-}
-
-.modal_list_container p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.modal_opener{
-    cursor: pointer;
-    transition: .1s; /*transition scaling animation done in script.js*/
-}
-
-.download_icons a:hover{
-    color: var(--title);
-}
-
 /*#endregion*/
 
 /*#endregion*/
 
 
-/* Extra small devices (phones, 600px and down) */
+/*#region Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{
         flex-direction: column;
@@ -413,3 +430,4 @@ p{
         /* background-color: violet; */
     }
 }
+/*#endregion*/

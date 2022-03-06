@@ -11,7 +11,7 @@ let modal_dicts = {
         modal: document.getElementById("twit_modal"),
         btn: document.getElementsByClassName("twit_open"),
         close: document.getElementById("twit_close"),
-        link_arg: "2021percent",
+        link_arg: "twit",
 
     },
 
@@ -39,6 +39,7 @@ let modal_dicts = {
 
 const params = new URLSearchParams(window.location.search);
 let link_modal = params.get('modal');
+console.log(link_modal);
 let open_modal_id = null;
 
 let show = function(modal_id, refreshLink=true){ 
@@ -58,7 +59,6 @@ let hide = function(modal_id){
     document.body.style.overflow = "visible";
 
     params.delete('modal');
-    console.log(params.toString());
     window.history.replaceState({}, '', `?`);
 
     open_modal_id = null;
@@ -116,9 +116,4 @@ for (card of document.getElementsByClassName("card")){
     })
 }
 
-/*
-    on card:hover{
-        each of the modal_opener elements scale transform
-    }
-*/
 //#endregion
