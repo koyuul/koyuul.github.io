@@ -1,0 +1,10 @@
+{
+    "title": "thingstodo@sjsu",
+    "description": "a web app that you can use to discover new places around campus to hang out, eat, shop, or explore. you can find spots suggested by other students, as  well as suggest your own! i'd love for this to be a place where students can show each other all the cool and unique things that SJ has to offer.",
+    "categories": ["ReactJS", "Node.js", "MongoDB", "CSS"],
+    "links": {
+        "thumb": "https://i.ibb.co/8PsSs0G/thumb-thingstodosjsu.png",
+        "gif": "https://i.ibb.co/F4kTvWh/ezgif-com-gif-maker-1.gif",
+        "site": "https://www.thingstodosjsu.com/"
+    }
+}

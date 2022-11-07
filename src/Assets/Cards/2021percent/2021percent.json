@@ -1,0 +1,10 @@
+{
+    "title": "@2021percent.py",
+    "description": "a twitter bot developed in high school, that tweeted out every day that the class of 2021 move a percentage point closer to graduating!",
+    "categories": ["Python", "Tweepy", "PythonAnywhere"],
+    "links": {
+        "thumb": "https://i.ibb.co/BfZSxty/Untitled.png",
+	    "gif": "https://i.ibb.co/PYrbx2j/ezgif-com-gif-maker.gif",
+        "site": "https://twitter.com/2021percent"
+    }
+}

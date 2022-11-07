@@ -13,16 +13,22 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.22",
+    "framer-motion": "^4.1.17",
+    "json-loader": "^0.5.7",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.4.2",
+    "react-transition-group": "^4.4.5",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "babel-preset-nano-react-app": "^0.1.0",
     "gh-pages": "^4.0.0",
-    "typescript": "^4.7.4",
     "vite": "^3.0.3"
   }
 }

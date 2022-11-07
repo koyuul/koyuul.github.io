@@ -1,0 +1,107 @@
+#projects{
+    display: flex;
+    flex-direction: column;
+    margin: 50vh 10vw 0 10vw;
+    transform: translateY(-50%);
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 100%;
+}
+
+.solo {
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+.project-card{
+    width: 100%;
+    margin: 2vw 0em;
+    margin-right: 1em;
+    overflow: visible;
+    font-size: 1vw;
+    line-height: .6vw;
+}
+
+.project-card p{
+    margin: .4em 0;
+}
+
+.project-content{
+    display: flex;
+}
+
+.project-thumbnail-container{
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 1em;
+    position: relative;
+}
+
+.project-gif{
+    max-width: 80%;
+    max-height: auto;
+    position: absolute;
+}
+
+.project-thumbnail{
+    position: absolute;
+    max-width: 80%;
+    max-height: auto;
+    filter: drop-shadow(10px 8px 0px var(--accent-gold)) brightness(85%);
+    transition: .15s;
+}
+
+.project-thumbnail-container:hover .project-thumbnail{
+    transition: .25s;
+    filter: drop-shadow(5px 4px 0px var(--accent-gold)) brightness(100%);
+    opacity: 0%;
+}
+
+.project-thumbnail-container:hover .project-gif{
+    transition: .15s;
+    filter: drop-shadow(0px 0px 10px var(--accent-gold)) brightness(100%);
+    transform: scale(1.10);
+}
+
+.project-anchor{
+    text-decoration: none;
+}
+
+.project-title{
+    margin: 0em;
+    font-size: 1.2em;
+    display: flex;
+    align-items: baseline;
+}
+
+.project-link-icon{
+    opacity: 0%;
+    fill: var(--accent-gold);
+    width: .8em;
+    height: .8em;
+    margin-left: .2em;
+    transition: .15s;
+    transform: translateX(-50%);
+}
+
+.project-title:hover .project-link-icon{
+    opacity: 100%;
+    transform: translateX(0%);
+
+}
+
+.project-category{
+    display: inline;
+    font-family: josefin-sans;
+    color: white;
+    background-color: var(--accent-gold);
+    padding: .25em .5em;
+    margin-right: .2em;
+    border-radius: 1em;
+}
