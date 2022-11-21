@@ -10,5 +10,7 @@ ReactDOM.render(
         <link rel="preload" href="https://i.ibb.co/wrXwd10/streetkombat.png" as="image"/>
         <link rel="preload" href="https://i.ibb.co/8PsSs0G/thumb-thingstodosjsu.png" as="image"/>
         <link rel="preload" href="https://i.ibb.co/dcxX94S/thumb-typetester.png" as="image"/>
+        <link rel="preload" href="https://i.ibb.co/BfZSxty/Untitled.png" as="image"/>
+        
     </BrowserRouter>
 , document.getElementById("root"));

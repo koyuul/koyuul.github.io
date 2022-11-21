@@ -1,5 +1,5 @@
 import * as React from "react";
-import ProjectCard from "./ProjectCard/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import ttdsjsu from "../../Assets/Cards/ttdsjsu/ttdsjsuCard.json";
 import typetester from "../../Assets/Cards/typeTester/typetesterCard.json";
 import streetkombat from "../../Assets/Cards/streetKombat/streetKombatCard.json";

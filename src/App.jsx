@@ -3,19 +3,21 @@ import Header from "./Components/Header/Header";
 import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
 import Experience from "./Components/Experience/Experience";
-import Contact from "./Components/Contact/Contact";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, redirect } from "react-router-dom";
 import "./index.css";
 import { useEffect, useState } from "react";
 
 function App(){
     const location = useLocation();
+    const navigate = useNavigate();
     const [displayLocation, setDisplayLocation] = useState(location);
     const [transitionStage, setTransitionStage] = useState("fadeIn");
-
     useEffect(() => {
+        if (location.search.includes("?modal")) return navigate("/projects");
         if (location !== displayLocation) setTransitionStage("fadeOut");
     }, [location, displayLocation])
+
+    
 
     return(
         <>

@@ -5,6 +5,7 @@ body{
     --accent-blue: #29426B;
     --accent-gold: #C7974F;
     --accent-gold-dark: #9b7131;
+    --accent-gray: #797979;
 
     background-color: var(--main-white);
     background-image: url("./Assets/background.jpg");
@@ -17,6 +18,13 @@ h1, h2, h3, h4{
     font-weight: 700;
     font-style: normal;
     color: var(--accent-blue);
+}
+
+h6{
+  font-family: josefin-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-gray)
 }
 
 p{
