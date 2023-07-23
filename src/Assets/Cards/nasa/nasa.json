@@ -1,0 +1,8 @@
+{
+    "title": "Networking Intern",
+    "company": "NASA",
+    "date_start": "5/23",
+    "date_end": "8/23",
+    "description": "joined NASA Glenn Research Center on the efforts of modernizing space communication and navigation. installed a high delay tolerant networking experiment on a cube satellite, launching December 2023",
+    "categories": ["C++", "Docker", "Linux"]
+}
