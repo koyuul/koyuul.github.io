@@ -10,8 +10,8 @@ function About(props){
 					<h2 id="about-subtitle">[aka kyle deleon]</h2>
 				</div>
 				<p id="about-description">
-					Hey! I'm a current San Jose State University 2nd year, from the Bay Area.
-					I love to see ideas come to life, and to help or entertain real people! I deeply
+					Hey! I'm a current San Jose State University 3rd year, from the Bay Area.
+					I love to see ideas come to life, and help real people! I deeply
 					value creating products that are truly useful, accessible, and reliable for all.
 				</p>
 			</div>
