@@ -8,9 +8,8 @@ body{
     --accent-gray: #797979;
 
     background-color: var(--main-white);
-    background-image: url("https://i.ibb.co/YL9kf8p/background-min.jpg");
-	overflow: hidden;
-
+    width: 100vw;
+	  overflow: hidden;
 }
 
 h1, h2, h3, h4{

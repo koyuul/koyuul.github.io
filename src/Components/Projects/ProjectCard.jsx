@@ -5,7 +5,7 @@ function ProjectCard({projectFile}){
     let project = projectFile; //title: string; description: string; categories: string[]; links: {}; 
     let categoryElements  =[];
     for (let category of project.categories){
-        let element = 
+        let element =  
         <div className ="project-category" key={projectFile.title + "_" + category}>
             {category}
         </div>

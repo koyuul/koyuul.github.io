@@ -3,8 +3,8 @@
     "description": "an in-browser fighting game powered by machine learning, where you can control your character by your movements! developed with two others for Google CSSI's Capstone Hackathon, and  won award for crowd favorite project.",
     "categories": ["JavaScript", "Google Teachable Machine"],
     "links": {
-        "thumb": "https://i.ibb.co/wrXwd10/streetkombat.png",
-	    "gif": "https://i.ibb.co/TKGP9G0/streetkombat.gif",
+        "thumb": "/src/Assets/Cards/streetKombat/streetKombat.webp",
+	    "gif": "/src/Assets/Cards/streetKombat/streetKombat_animation.webp",
         "site": "https://docs.google.com/presentation/d/11WAga4RDNiiqsPdw6-KFiY3QrxsLxpP5UNStsEuCyuw/edit?usp=sharing"
     }
 }
