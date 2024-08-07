@@ -1,70 +1,77 @@
-body{
-    margin: 0;
-    --main-black: #030718;
-    --main-white: #FFF4D8;
-    --accent-blue: #29426B;
-    --accent-gold: #C7974F;
-    --accent-gold-dark: #9b7131;
-    --accent-gray: #797979;
+body {
+  margin: 0;
+  --main-black: #030718;
+  --main-white: #FFF4D8;
+  --accent-blue: #29426B;
+  --accent-gold: #C7974F;
+  --accent-gold-dark: #9b7131;
+  --accent-gray: #797979;
 
-    background-color: var(--main-white);
-    width: 100vw;
-	  overflow: hidden;
+  background-color: var(--main-white);
+  background-image: url(Assets/background.webp);
+  background-size: cover;
+  width: 100vw;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4{
-    font-family: josefin-sans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: var(--accent-blue);
+h1,
+h2,
+h3,
+h4 {
+  font-family: josefin-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent-blue);
 }
 
-h6{
+h6 {
   font-family: josefin-sans, sans-serif;
   font-weight: 500;
   font-style: normal;
   color: var(--accent-gray)
 }
 
-p{
-    line-height: 4vh;
+p {
+  line-height: 4vh;
 }
-    
-#root{
-    font-family: playfair-display, serif !important;
-    font-weight: 400;
-    font-size: 1.4vw;
-    font-style: normal;
-    color: var(--main-black);
+
+#root {
+  font-family: playfair-display, serif !important;
+  font-weight: 400;
+  font-size: 1.4vw;
+  font-style: normal;
+  color: var(--main-black);
 }
 
 
 .fadeIn {
-    animation: 0.25s fadeIn forwards;
+  animation: 0.25s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.25s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 0);
   }
-  
-  .fadeOut {
-    animation: 0.25s fadeOut forwards;
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-20px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-20px, 0);
-      opacity: 0;
-    }
+
+  to {
+    transform: translate(-20px, 0);
+    opacity: 0;
   }
+}

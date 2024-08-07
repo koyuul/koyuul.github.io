@@ -1,10 +1,15 @@
 {
     "title": "Type Tester",
     "description": "a web extension that allows you to test your WPM, right in your browser! as one of my earlier projects, aimed to be to the point, useful, and easy to use. over 600+ concurrent users!",
-    "categories": ["JavaScript", "HTML", "CSS", "jQuery"],
+    "categories": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "jQuery"
+    ],
     "links": {
-        "thumb": "/src/Assets/Cards/typeTester/typeTester.webp",
-	    "gif": "/src/Assets/Cards/typeTester/typeTester_animation.gif",
+        "thumb": "/typeTester.webp",
+        "gif": "/typeTester_animation.gif",
         "site": "https://chrome.google.com/webstore/detail/type-tester/mdaghkoflnebojailmicpplodemfkhba"
     }
 }

@@ -1,10 +1,14 @@
 {
     "title": "Project JAVELIN",
     "description": "Served as project manager for a can-satellite, which launches from 2300+ feet. Collects GPS, barometer, altimeter data, while streaming to a groundstation in real time.",
-    "categories": ["C++", "Arduino", "Embedded Systems"],
+    "categories": [
+        "C++",
+        "Arduino",
+        "Embedded Systems"
+    ],
     "links": {
-        "thumb": "/src/Assets/Cards/projectJAVELIN/projectJAVELIN.webp",
-	    "gif": "/src/Assets/Cards/projectJAVELIN/projectJAVELIN_animation.webp",
+        "thumb": "/projectJAVELIN.webp",
+        "gif": "/projectJAVELIN_animation.webp",
         "site": "https://cube3sjsu.org"
     }
 }

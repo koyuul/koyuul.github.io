@@ -1,10 +1,14 @@
 {
     "title": "JAVELIN Groundstation",
     "description": "Solo developed reusable mission control software for satellite launches. Efficiently reads, visualizes, graphs, and maps mission information from various sensors in realtime, with storing and replaying abilities.",
-    "categories": ["ReactJS", "Leaflet", "Three.js"],
+    "categories": [
+        "ReactJS",
+        "Leaflet",
+        "Three.js"
+    ],
     "links": {
-        "thumb": "/src/Assets/Cards/JAVELINGroundStation/JAVELINGroundStation.webp",
-	    "gif": "/src/Assets/Cards/JAVELINGroundStation/JAVELINGroundStation_animation.webp",
+        "thumb": "/JAVELINGroundStation.webp",
+        "gif": "/JAVELINGroundStation_animation.webp",
         "site": "https://cube3sjsu.org"
     }
 }

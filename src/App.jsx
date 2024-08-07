@@ -1,13 +1,13 @@
 import * as React from "react";
-import Header from "./Components/Header/Header";
-import About from "./Components/About/About";
-import Projects from "./Components/Projects/Projects";
-import Experience from "./Components/Experience/Experience";
-import { Routes, Route, useLocation, useNavigate, redirect } from "react-router-dom";
-import "./index.css";
 import { useEffect, useState } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import About from "./Components/About/About";
+import Experience from "./Components/Experience/Experience";
+import Header from "./Components/Header/Header";
+import Projects from "./Components/Projects/Projects";
+import "./index.css";
 
-function App(){
+function App() {
     const location = useLocation();
     const navigate = useNavigate();
     const [displayLocation, setDisplayLocation] = useState(location);
@@ -17,16 +17,16 @@ function App(){
         if (location !== displayLocation) setTransitionStage("fadeOut");
     }, [location, displayLocation])
 
-    
 
-    return(
+
+    return (
         <>
-            <Header/>
+            <Header />
             <div
                 id="fadeDiv"
                 className={`${transitionStage}`}
                 onAnimationEnd={() => {
-                    if (transitionStage == "fadeOut"){
+                    if (transitionStage == "fadeOut") {
                         setTransitionStage("fadeIn");
                         setDisplayLocation(location);
                     }
@@ -34,10 +34,10 @@ function App(){
             >
                 <Routes location={displayLocation}>
                     <Route path="/">
-                        <Route index element={<About/>} exact/>
+                        <Route index element={<About />} exact />
                     </Route>
-                    <Route path="/projects" element={<Projects/>} exact/>
-                    <Route path="/experience" element={<Experience/>} exact/>
+                    <Route path="/projects" element={<Projects />} exact />
+                    <Route path="/experience" element={<Experience />} exact />
                 </Routes>
             </div>
         </>

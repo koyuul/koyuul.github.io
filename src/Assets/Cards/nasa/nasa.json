@@ -1,8 +1,12 @@
 {
-    "title": "Networking Intern",
+    "title": "Full Stack Intern",
     "company": "NASA",
     "date_start": "5/23",
-    "date_end": "8/23",
-    "description": "joined NASA Glenn Research Center on the efforts of modernizing space communication and navigation. installed a high delay tolerant networking experiment on a cube satellite, launching December 2023",
-    "categories": ["C++", "Docker", "Linux"]
+    "date_end": "ongoing",
+    "description": "interned at NASA Ames and Glenn Ressearch centers, installing a high delay tolerant networking experiment on a TechEdSat-11, which launched July 2024! Currently developing a ground station for the TechEdSat spacecraft family",
+    "categories": [
+        "C++",
+        "Docker",
+        "Linux"
+    ]
 }
